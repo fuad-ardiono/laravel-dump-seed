@@ -132,7 +132,6 @@ class ${extractedData.seedFileName} extends Seeder
 \t\t$dataExist = \\DB::table('${extractedData.tableName}')->first();
 
 \t\tif(!$dataExist){
-\t\t\t\\DB::table('${extractedData.tableName}')->delete();
 \t\t\t\\DB::table('${extractedData.tableName}')->insert([${extractedData.records}]);
 \t\t\t$this->command->info('${extractedData.tableName} table seeded !');
 \t\t}
