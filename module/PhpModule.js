@@ -69,7 +69,7 @@ export const allTableFile = (tableListData) => {
 
 class AllTable {
 	public $tableName = ${JSON.stringify(tableListData)};
-	
+
 	public function countTotalTable() {
 		return count($this->tableName);
 	}
@@ -125,11 +125,16 @@ class ${extractedData.seedFileName} extends Seeder
 
 \tpublic function run()
 \t{
+\t\tDB::statement("SET foreign_key_checks=0");
+\t\tDB::table('${extractedData.tableName}')->truncate();
+\t\tDB::statement("SET foreign_key_checks=1");
+
 \t\t$dataExist = \\DB::table('${extractedData.tableName}')->first();
 
 \t\tif(!$dataExist){
 \t\t\t\\DB::table('${extractedData.tableName}')->delete();
 \t\t\t\\DB::table('${extractedData.tableName}')->insert([${extractedData.records}]);
+\t\t\t$this->command->info('${extractedData.tableName} table seeded !');
 \t\t}
 \t}
 }`;
