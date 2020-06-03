@@ -125,9 +125,9 @@ class ${extractedData.seedFileName} extends Seeder
 
 \tpublic function run()
 \t{
-\t\tDB::statement("SET foreign_key_checks=0");
-\t\tDB::table('${extractedData.tableName}')->truncate();
-\t\tDB::statement("SET foreign_key_checks=1");
+\t\t\\DB::statement("SET foreign_key_checks=0");
+\t\t\\DB::table('${extractedData.tableName}')->truncate();
+\t\t\\DB::statement("SET foreign_key_checks=1");
 
 \t\t$dataExist = \\DB::table('${extractedData.tableName}')->first();
 
