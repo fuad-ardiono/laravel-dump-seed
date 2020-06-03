@@ -1,4 +1,4 @@
-# Schema Extractor
+# Laravel Dump Seed File
 
 * How to setup ?
 
