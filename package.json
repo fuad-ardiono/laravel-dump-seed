@@ -1,0 +1,19 @@
+{
+  "name": "schema_extractor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extract db schema and test file",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Fuad Ardiono <fuad@investree.id>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "esm": "^3.2.25",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "rimraf": "^3.0.2"
+  }
+}
